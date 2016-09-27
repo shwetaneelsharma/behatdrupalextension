@@ -1,0 +1,31 @@
+#behat.yml
+default:
+  autoload:
+    '': %paths.base%/features/bootstrap
+  suites:
+    default:
+      contexts:
+        - FeatureContext
+        - Drupal\DrupalExtension\Context\MinkContext
+        - Drupal\DrupalExtension\Context\MessageContext
+      paths:
+        - %paths.base%/features
+  extensions:
+    Behat\MinkExtension:
+        browser_name: 'chrome'
+        goutte: ~
+        javascript_session: selenium2
+        selenium2:
+          wd_host: http://127.0.0.1:4444/wd/hub
+          capabilities: { "browser": "chrome", "version": "*", 'chrome': {'switches':['--start-maximized']}}
+        base_url: http://scout.local
+    Drupal\DrupalExtension:
+        blackbox: ~
+        region_map:
+          footer: '.region-footer-second-column'
+          footer_legal: '.region-footer-third-column'
+          main_navigation: '.main__navigation'
+          recent: '.title__center-pane'
+        api_driver: 'drupal'
+        drupal:
+          drupal_root: /home/shweta/StorageFolder/scoutorg/docroot
