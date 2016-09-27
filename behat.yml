@@ -28,4 +28,4 @@ default:
           recent: '.title__center-pane'
         api_driver: 'drupal'
         drupal:
-          drupal_root: /home/shweta/StorageFolder/scoutorg/docroot
+          drupal_root: /path/to/your/docroot
