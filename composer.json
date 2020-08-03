@@ -1,8 +1,8 @@
 {
-  "name": "Behat Axelerant template",
+  "name": "Behat-Axelerant-template",
   "description": "Behat setup for Axelerant template",
   "require-dev" : {
-    "behat/behat" : "3.*.*",
+    "behat/behat" : "3.4.*",
     "behat/mink-goutte-driver" : "*",
     "behat/mink-browserkit-driver" : "*",
     "behat/mink-extension" : "*",
@@ -10,6 +10,6 @@
     "drupal/drupal-driver": "*",
     "behat/mink" : "*",
     "drupal/drupal-extension" : "*",
-    "bex/behat-screenshot": "^2.1"
+    "dmore/behat-chrome-extension": "^1.3"
   }
 }
